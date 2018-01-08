@@ -11,7 +11,7 @@ function capitalize_Words(str){
 	// charAt recupere le premier caractere de la chaine  splice recupere le reste de la chaine
  return str.charAt(0).toUpperCase() + str.slice(1);
 }
-
+cd
 function cheekIndex(elem){
 	//verifier si id passer en parametre corespond a celuis de ma liste si oui return true
 	if (parseInt(id) === elem.ID) {
