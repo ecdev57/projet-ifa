@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>cours1</title>
+		<script type="text/javascript" src="./data/csvSession2_IFA.json"></script>
+	</head>
+	<body>
+		<h1>Annuaire IFA</h1>
+		<ul id="listeContainer"></ul>
+		<div id="detailWrap">
+			<h2 id="name"></h2>
+			<ul id="contentDesc"></ul>
+		</div>
+		<form action="#" id="form_id">
+		  <fieldset>
+		    <legend>Personal information:</legend>
+		     Connaissez vous javascript<br>
+		     <select name="js"  id="js">
+			  <option value="tb">Très bien</option>
+			  <option value="b">Bien</option>
+			  <option value="ab">Assez bien</option>
+			  <option value="pt">Pas du tout</option>
+			</select><br>
+		    Votre site préféré:<br>
+		    <input type="text" name="sitepef"  id="sitepef" placeholder="Votre site préferé"><br>
+			<textarea name="comsitepef" id="comsitepef" placeholder="Pourquoi ??"></textarea>
+			<br>
+			 Votre application préféré:<br>
+		    <input type="text" name="apppef"  id="apppef" placeholder="Votre application préferé"><br>
+			<textarea name="comapppef" id="comapppef" placeholder="Pourquoi ??"></textarea>
+			<br>
+			 Parcour avant ifa:<br>
+		    <textarea name="paravifa" id="paravifa"></textarea><br>
+		     Pourquoi ifa:<br>
+			<textarea name="prvifa" id="prvifa"></textarea>
+			<br>
+			<br>
+		    <input type="submit" value="Submit" id="Submit">
+		  </fieldset>
+		</form>
+		<script type="text/javascript" src="./cours1.js"></script>
+	</body>
+</html>

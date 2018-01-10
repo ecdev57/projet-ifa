@@ -52,15 +52,21 @@ submit.addEventListener("submit", function(event){
 	//on stop la propagation
 	event.preventDefault();
 	var newuser{};
-	console.log(submit.elements);
+	//ajouter
 	//boucle sur les valeurs des  champs du formulaire et on exclud le bouton submit
 	for (var i =0; i< submit.length; i++) {
 		if (submit.elements[i].value !== "Submit") {
 			console.log(submit.elements[i].value);
 			newuser[submit.elements[i].name]=submit.elements[i].value;
-			maListe
 		}
 	}
+	maListe.push(newUser);
+	var li = document.createElement("li");
+	li.innerHTML = newUser.Nom;
+	monUl.appendChild(li);
+	//editer
+	
+
  	//console.log(document.getElementById("Submit").value);
 
   	/*var js = document.getElementById("js").value;
