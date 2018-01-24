@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>contact</title>
+	<style type="text/css">
+		#demo{
+			z-index: 300;
+		}
+	</style>
+</head>
+<body onloadstart="changerImage(img)">
+<img src="img/pikachu_png_by_xyeddanishali-d66jrfr.png" alt="contact" id="demo">
+
+<img src="img/tel-clipart-20.jpg" alt="tel" width="80" height="80" title="tel" id="titre">
+<img src="img/mail.png" alt="mail" width="80" height="80" title="mail" id="mail">
+<div id="renseignement" style="height:40px;"></div>
+<script>
+	var img = document.getElementById("demo");
+	 document.getElementById("demo").addEventListener("mouseover",changerImage);
+	 document.getElementById("demo").addEventListener("mouseout",changerImage);
+	function changerImage(event){
+		if (event.type=="mouseover") {
+			this.style.backgroundColor = "#AA0000";
+		}else{
+			this.style.backgroundColor = "#069";
+		}
+	}
+	var ctnr = document.getElementById("renseignement");
+	var imgtit = document.getElementById("titre");
+	var mail =  document.getElementById("mail");
+	var p = document.createElement('p');
+	  	p.id = 'section';
+	  ctnr.appendChild(p);
+	   imgtit.addEventListener("mouseover",changerPhone);
+	   imgtit.addEventListener("mouseout",changerPhone);
+		function changerPhone(event,id){
+			if (event.type=="mouseover") {
+				document.getElementById("section").innerHTML ="Appelez-nous au 06 06 06 06 pour toutes vos demandes.";
+			}else{
+				document.getElementById("section").innerHTML ="";
+			}
+		}
+	   mail.addEventListener("mouseover",changerMail);
+	   mail.addEventListener("mouseout",changerMail);
+		function changerMail(event){
+			if (event.type=="mouseover") {
+				document.getElementById("section").innerHTML ="Envoyez-nous un courriel à contact[at]sfcv.com, nous vous répondrons immédiatement.";
+			}else{
+				document.getElementById("section").innerHTML ="";
+			}
+		}
+</script>
+</body>
+</html>

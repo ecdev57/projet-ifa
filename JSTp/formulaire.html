@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+	<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Formulaire</title>
+	</head>
+	<body>
+		<form action="" id="demande">
+			<input type="text" placeholder="Nom" id="nom" />
+			<input type="text" placeholder="Prénom" id="prenom" />
+			<input type="number" placeholder="Âge" id="age" />
+			<!-- <input type="button" value="envoyer" onClick="verifierFormulaire()" /> -->
+			<button onclick="verifierFormulaire()">envoyer</button>
+		</form>
+		<script type="text/javascript">
+			function verifierFormulaire(){
+				var formulaire = document.getElementById('demande') ;
+				var valid = 0;
+				for (var i =0; i<formulaire.length; i++) {
+					if(formulaire[i].type !== 'submit' && formulaire[i].value != "") {
+						console.log(formulaire[i].value);
+						alert("formulaire ok");
+					} else if(formulaire[i].type !== 'submit' && formulaire[i].value == ""){
+						//return true;
+						alert("il manque des champs :"+formulaire[i].placeholder);
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
